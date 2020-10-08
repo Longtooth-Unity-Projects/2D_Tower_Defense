@@ -1,16 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [Header("Configuration Parameters")]
+    ///negative speed for left moving positive speed for right moving
     [SerializeField] float projectileSpeed = 3f;
-    [SerializeField] float spinSpeed = 3f;
+    [SerializeField] float spinSpeed = 200f;
+    [SerializeField] int damage = 1;
 
-    private void Update()
+    private void Start()
     {
-        transform.Translate(Vector2.right * Time.deltaTime * projectileSpeed);
-        //transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
-        //projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, speed * (int)direction);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(projectileSpeed, 0);
+        rb.angularVelocity = spinSpeed;
     }
+
+    public void OnHit()
+    {
+        Destroy(gameObject);
+    }
+
+    public int GetDamage() { return damage; }
 }

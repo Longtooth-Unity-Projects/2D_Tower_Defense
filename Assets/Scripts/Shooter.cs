@@ -5,15 +5,11 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     [SerializeField] private Projectile projectile;
-    [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject weapon;
 
-    private void Start()
-    {
-        //
-    }
 
     public void ShootProjectile()
     {
-        Instantiate(projectile, gun.transform.position, gun.transform.rotation);
+        Instantiate(projectile, weapon.transform.position, weapon.transform.rotation);
     }
 }
