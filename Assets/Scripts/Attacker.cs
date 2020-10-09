@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attacker : MonoBehaviour
 {
     [Range(0f, 5f)] [SerializeField] float currentMovementSpeed = 1f;
-    [SerializeField] int health = 1;
+    //[SerializeField] int health = 1;
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Attacker : MonoBehaviour
         transform.Translate(Vector2.left * Time.deltaTime * currentMovementSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+/*    private void OnTriggerEnter2D(Collider2D collision)
     {
         ProcessHit(collision);
     }
@@ -29,11 +29,11 @@ public class Attacker : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         ProcessHit(collision);
-    }
+    }*/
 
-    private void ProcessHit(Collider2D collision)
+/*    private void ProcessHit(Collider2D otherCollider)
     {
-        Projectile projectile = collision.GetComponent<Projectile>();
+        Projectile projectile = otherCollider.GetComponent<Projectile>();
         if (projectile)
         {
             health -= projectile.GetDamage();
@@ -43,7 +43,7 @@ public class Attacker : MonoBehaviour
                 ProcessDestruction();
             }
         }
-    }
+    }*/
 
     private void ProcessDestruction()
     {

@@ -18,10 +18,15 @@ public class Projectile : MonoBehaviour
         rb.angularVelocity = spinSpeed;
     }
 
-    public void OnHit()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
-    }
+        Health health = other.GetComponent<Health>();
+        Attacker attacker = other.GetComponent<Attacker>();
 
-    public int GetDamage() { return damage; }
+        if (health && attacker)
+        {
+            health.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 }
