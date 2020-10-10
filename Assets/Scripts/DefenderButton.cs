@@ -6,13 +6,18 @@ using UnityEngine.UIElements;
 
 public class DefenderButton : MonoBehaviour
 {
-    private DefenderButton[] defenderButtons;
+    //configuration parameters
+    [SerializeField] private Defender defender; // TODO used for debugging purposes
+    private DefenderButton[] defenderButtons;   // TODO revisit this implementation for possibly static implmementation
     private Color32 inactiveColor = new Color32(128, 0, 0, 255);
 
- 
+    //cached references
+    DefenderSpawner defenderSpawner;
+
     private void Start()
     {
         defenderButtons = FindObjectsOfType<DefenderButton>();
+        defenderSpawner = FindObjectOfType<DefenderSpawner>();
     }
     private void OnMouseDown()
     {
@@ -21,5 +26,6 @@ public class DefenderButton : MonoBehaviour
             defenderButton.GetComponent<SpriteRenderer>().color = inactiveColor;
         }
         GetComponent<SpriteRenderer>().color = Color.white;
+        defenderSpawner.SetDefender(defender);
     }
 }

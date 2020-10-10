@@ -39,9 +39,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4977135529013625086}
+  - component: {fileID: 3427059696125904915}
+  - component: {fileID: 4977135529013625087}
   - component: {fileID: 4977135529013625057}
   - component: {fileID: 4977135529013625056}
-  - component: {fileID: 4977135529013625087}
   m_Layer: 0
   m_Name: DefenderCactus
   m_TagString: Untagged
@@ -57,13 +58,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4977135529013625059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 2, z: -0.6567562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3176360696982253220}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3427059696125904915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4977135529013625059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b41c2fabb3089d42b1231868c8a3478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+--- !u!114 &4977135529013625087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4977135529013625059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee80ac33cf1f4a458abc3f5dea37b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1805758227, guid: c47b3e80fed980a4899bcb7304070c46, type: 3}
+  weapon: {fileID: 222094400614525394}
 --- !u!95 &4977135529013625057
 Animator:
   serializedVersion: 3
@@ -134,17 +162,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4977135529013625087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4977135529013625059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee80ac33cf1f4a458abc3f5dea37b44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1805758227, guid: c47b3e80fed980a4899bcb7304070c46, type: 3}
-  weapon: {fileID: 222094400614525394}
