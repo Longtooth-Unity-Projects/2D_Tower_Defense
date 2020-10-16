@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     [Header("Configuration Parameters")]
     ///negative speed for left moving positive speed for right moving
     [SerializeField] float projectileSpeed = 3f;
-    [SerializeField] float spinDegPerSec = 200f;
+    [SerializeField] float spinDegPerSec = -200f;
     [SerializeField] int damage = 1;
 
     private void Start()

@@ -5,7 +5,7 @@ using UnityEngine.Assertions.Must;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] Defender defender; //TODO serialized for debugging purposes
+    Defender defenderToSpawn;
 
     //cached references
     [SerializeField] StarDisplay starDisplay;
@@ -18,24 +18,29 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (starDisplay.bHasEnoughStars(defender.GetCost()))
+        if (defenderToSpawn && starDisplay.bHasEnoughStars(defenderToSpawn.GetCost()))
         {
-            Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            clickPos = Camera.main.ScreenToWorldPoint(clickPos);
-
-            //do this to center defender in grid square
-            clickPos.x = Mathf.RoundToInt(clickPos.x);
-            clickPos.y = Mathf.RoundToInt(clickPos.y);
-            SpawnDefender(clickPos);
+            SpawnDefender(GetClickToWorldPos());
         }
     }
 
 
     private void SpawnDefender(Vector2 worldPos)
     {
-        GameObject newDefender = Instantiate(defender.gameObject, worldPos, Quaternion.identity) as GameObject;
-        starDisplay.SpendStars(defender.GetCost());
+        Defender newDefender = Instantiate(defenderToSpawn, worldPos, Quaternion.identity) as Defender;
+        starDisplay.SpendStars(defenderToSpawn.GetCost());
     }
 
-    public void SetDefender(Defender defenderChoice) { defender = defenderChoice; }
+    private Vector2 GetClickToWorldPos()
+    {
+        Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        clickPos = Camera.main.ScreenToWorldPoint(clickPos);
+
+        //do this to center defender in grid square
+        clickPos.x = Mathf.RoundToInt(clickPos.x);
+        clickPos.y = Mathf.RoundToInt(clickPos.y);
+        return clickPos;
+    }
+
+    public void SetDefenderToSpawn(Defender defenderChoice) { defenderToSpawn = defenderChoice; }
 }

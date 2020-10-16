@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 2531719476287696517}
   - component: {fileID: 170869212552417381}
   m_Layer: 5
-  m_Name: GardenText (TMP)
+  m_Name: StartText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 6125337702769037065}
   - component: {fileID: 8393838859543589353}
   m_Layer: 5
-  m_Name: LoadingText (TMP)
+  m_Name: QuitText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

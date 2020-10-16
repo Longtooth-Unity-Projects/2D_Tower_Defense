@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class DefenderButton : MonoBehaviour
 {
     //configuration parameters
-    [SerializeField] private Defender defender; // TODO used for debugging purposes
+    [SerializeField] private Defender defenderPrefab;
     private DefenderButton[] defenderButtons;   // TODO revisit this implementation for possibly static implmementation
     private Color32 inactiveColor = new Color32(128, 0, 0, 255);
 
@@ -26,6 +26,6 @@ public class DefenderButton : MonoBehaviour
             defenderButton.GetComponent<SpriteRenderer>().color = inactiveColor;
         }
         GetComponent<SpriteRenderer>().color = Color.white;
-        defenderSpawner.SetDefender(defender);
+        defenderSpawner.SetDefenderToSpawn(defenderPrefab);
     }
 }
