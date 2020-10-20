@@ -8,15 +8,19 @@ public class AttackerSpawner : MonoBehaviour
     //configuration parameters
     [SerializeField] private float minSpawnTime = 2f;
     [SerializeField] private float maxSpawnTime = 5f;
-    [SerializeField] private Attacker attackerPrefab;
+    [SerializeField] private Attacker[] attackerPrefabs;
+
+    private int numOfPrefabs = 0;
+    private int attackerIndex = 0;
     private int lane = 0;
 
 
-    [SerializeField] bool canSpawn = true;  //serialized for testing
+    [SerializeField] bool canSpawn = true;  // TODO: serialized for testing
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        numOfPrefabs = attackerPrefabs.Length;
         lane = Mathf.RoundToInt(transform.position.y);
 
         while (canSpawn)
@@ -29,7 +33,11 @@ public class AttackerSpawner : MonoBehaviour
 
     private void spawnAttacker()
     {
-        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, Quaternion.identity) as Attacker;
+        // Pick attacker
+        attackerIndex = Random.Range(0, numOfPrefabs);
+
+        // Spawn
+        Attacker newAttacker = Instantiate(attackerPrefabs[attackerIndex], transform.position, Quaternion.identity) as Attacker;
         newAttacker.transform.parent = transform;
     }
 

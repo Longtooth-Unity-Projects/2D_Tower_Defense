@@ -6,10 +6,17 @@ public class Defender : MonoBehaviour
 {
     [SerializeField] private int cost = 1;
 
+    //cached references
+    LevelManager levelManager;
+
+    private void Start()
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+    }
 
     public void IncreaseStars(int amountToIncrease) 
     {
-        FindObjectOfType<StarDisplay>().AddStars(amountToIncrease);
+        levelManager.AddStars(amountToIncrease);
     }
 
 

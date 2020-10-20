@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] int splashScreenScene = 0;
-    [SerializeField] float loadScreenDelay = 3f;
+    [SerializeField] float loadSceneDelay = 3f;
 
-    private int currentScreenIndex;
+    private int currentSceneIndex;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentScreenIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentScreenIndex == splashScreenScene)
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == splashScreenScene)
         {
             StartCoroutine(DelayLoadScene());
         }
@@ -23,12 +23,18 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator DelayLoadScene()
     {
-        yield return new WaitForSeconds(loadScreenDelay);
+        yield return new WaitForSeconds(loadSceneDelay);
         LoadNextScene();
     }
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(currentScreenIndex + 1);
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public void LoadGameOverScene()
+    {
+        SceneManager.LoadScene("GameOverScene");
+
     }
 }

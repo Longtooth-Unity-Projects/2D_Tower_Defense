@@ -8,17 +8,20 @@ public class DefenderSpawner : MonoBehaviour
     Defender defenderToSpawn;
 
     //cached references
-    [SerializeField] StarDisplay starDisplay;
+    LevelManager levelManager;
+    //[SerializeField] StarDisplay starDisplay;
 
 
     private void Start()
     {
-        starDisplay = FindObjectOfType<StarDisplay>();
+        levelManager = FindObjectOfType<LevelManager>();
+
+        //starDisplay = FindObjectOfType<StarDisplay>();
     }
 
     private void OnMouseDown()
     {
-        if (defenderToSpawn && starDisplay.bHasEnoughStars(defenderToSpawn.GetCost()))
+        if (defenderToSpawn && levelManager.bHasEnoughStars(defenderToSpawn.GetCost()))
         {
             SpawnDefender(GetClickToWorldPos());
         }
@@ -28,7 +31,7 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 worldPos)
     {
         Defender newDefender = Instantiate(defenderToSpawn, worldPos, Quaternion.identity) as Defender;
-        starDisplay.SpendStars(defenderToSpawn.GetCost());
+        levelManager.SpendStars(defenderToSpawn.GetCost());
     }
 
     private Vector2 GetClickToWorldPos()
