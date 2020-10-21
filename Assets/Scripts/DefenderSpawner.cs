@@ -9,14 +9,11 @@ public class DefenderSpawner : MonoBehaviour
 
     //cached references
     LevelManager levelManager;
-    //[SerializeField] StarDisplay starDisplay;
 
 
     private void Start()
     {
         levelManager = FindObjectOfType<LevelManager>();
-
-        //starDisplay = FindObjectOfType<StarDisplay>();
     }
 
     private void OnMouseDown()

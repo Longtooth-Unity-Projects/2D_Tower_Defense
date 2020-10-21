@@ -14,6 +14,12 @@ public class Attacker : MonoBehaviour
     private Defender currentTarget;
 
 
+    //***** core functios
+    private void Awake()
+    {
+        FindObjectOfType<LevelManager>().AddAttacker();
+    }
+
     private void Start()
     {
         currentMovementSpeed = movementSpeed;
@@ -27,6 +33,16 @@ public class Attacker : MonoBehaviour
         transform.Translate(Vector2.left * Time.deltaTime * currentMovementSpeed);  // TODO: Remove this from update. Use rigid body method by making start move and stop move functions.
     }
 
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelManager>().RemoveAttacker();
+    }
+
+
+
+
+    // ***** other functions
 
     public void StartMove()
     {
@@ -47,6 +63,9 @@ public class Attacker : MonoBehaviour
         myAnimator.SetBool("bIsAttacking", true);
         currentTarget = targetDefender;
     }
+
+
+    // TODO: decouple these from the animations. Make a continous damage function but have the animations still check if there is a target
 
     /// <summary>
     /// This gets called via an attack animation event

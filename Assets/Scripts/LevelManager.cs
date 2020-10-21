@@ -1,73 +1,114 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     public static Action<int> StarsUpdated;
     public static Action<int> HealthUpdated;
+    public static Action LevelTimerExpired;
 
-    [Tooltip("Amount of Stars the Player Starts With.")]
-    [SerializeField] private int initialNumOfStars = 10;
-    private int currentStars;
+    // configuration variables
+    private bool timerComplete = false;
 
-    [Tooltip("Initial Health the Player Starts With.")]
-    [SerializeField] private int initialHealth = 50;
-    private int currentHealth;
+    [Tooltip("Amount of stars the player starts with.")]
+    [SerializeField] private int numOfStars = 10;
 
-    [Tooltip("Duration of the Level in Seconds.")]
+    [Tooltip("Initial health the player starts with.")]
+    [SerializeField] private int health = 50;
+
+    [Tooltip("Duration of the level in seconds.")]
     [SerializeField] private float levelDurationInSec = 10f;
 
+    [Tooltip("How often the level manager checks to see if level timer is complete.")]
+    [SerializeField] private float checkTimerDelay = 0.2f;
+
+    [Tooltip("Delay before we change scenes.")]
+    [SerializeField] private float sceneChangeDelay = 10f;
+
+    [SerializeField] private int numOfAttackers = 0;    // TODO: serialized for debugging.
+
+    [SerializeField] private GameObject levelCompleteCanvas;
+    [SerializeField] AudioClip levelCompleteClip;
+
+    // ***** core functions
 
     private void Start()
     {
-        currentStars = initialNumOfStars;
-        StarsUpdated?.Invoke(currentStars);
-        currentHealth = initialHealth;
-        HealthUpdated?.Invoke(currentHealth);
+        levelCompleteCanvas.SetActive(false);
+        StartCoroutine(CheckTimer());
     }
 
 
-    //health display
+    //*****misc methods
+    private IEnumerator CheckTimer()
+    {
+        //due to delay of spawns and destruction, no need to check this every update, so we have an adjustable check routine
+        while (Time.timeSinceLevelLoad <= levelDurationInSec)
+        {
+            yield return new WaitForSeconds(checkTimerDelay);
+        }
+        timerComplete = true;
+        LevelTimerExpired?.Invoke();
+    }// end of method CheckWinConditions
+
+
+    //*****health display
     public void AdjustHealth(int adjustAmount)
     {
-        currentHealth += adjustAmount;
-        HealthUpdated?.Invoke(currentHealth);
-        if (currentHealth <= 0)
+        health += adjustAmount;
+        HealthUpdated?.Invoke(health);
+        if (health <= 0)
         {
             FindObjectOfType<SceneLoader>().LoadGameOverScene();
         }
     }
 
-    //star display
-    public bool bHasEnoughStars(int amount) { return currentStars >= amount; }
+    //*****star display
+    public bool bHasEnoughStars(int amount) { return numOfStars >= amount; }
 
 
     public void AddStars(int amountToAdd)
     {
-        currentStars += amountToAdd;
-        StarsUpdated?.Invoke(currentStars);
+        numOfStars += amountToAdd;
+        StarsUpdated?.Invoke(numOfStars);
     }
 
 
     public void SpendStars(int amount)
     {
-        if (currentStars >= amount)
+        if (numOfStars >= amount)
         {
-            currentStars -= amount;
-            StarsUpdated?.Invoke(currentStars);
+            numOfStars -= amount;
+            StarsUpdated?.Invoke(numOfStars);
         }
     }
 
+    //*****attacker tracking
+    public void AddAttacker() { numOfAttackers++; }
 
-    public void LevelFinished()
+    public void RemoveAttacker() 
     {
-        Debug.Log("Level Finished!");
+        numOfAttackers--;
+
+        if ((numOfAttackers <= 0) && timerComplete)
+            StartCoroutine(HandleWinCondition());
     }
 
 
-    public int GetInitialStars() { return initialNumOfStars; }
-    public int GetInitialHealth() { return initialHealth; }
+
+    IEnumerator HandleWinCondition()
+    {
+        levelCompleteCanvas.SetActive(true);
+        GetComponent<AudioSource>().PlayOneShot(levelCompleteClip);
+        yield return new WaitForSeconds(sceneChangeDelay);
+        FindObjectOfType<SceneLoader>().LoadNextScene();
+    }
+
+
+    public int GetNumOfStars() { return numOfStars; }
+    public int GetHealth() { return health; }
     public float GetLevelDuration() { return levelDurationInSec; }
 }

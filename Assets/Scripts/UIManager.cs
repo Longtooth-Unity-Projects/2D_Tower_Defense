@@ -6,10 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
-    [SerializeField] private int health;
-    [SerializeField] private int numOfStars;
-    [SerializeField] private float levelDurationInSec;
+    private float levelDurationInSec;
 
     // cached references
     LevelManager levelManager;
@@ -17,12 +14,14 @@ public class UIManager : MonoBehaviour
     TextMeshProUGUI healthText;
     TextMeshProUGUI starText;
     Slider slider;
+    bool levelFinished = false;
 
     private void OnEnable()
     {
         //add listeners
         LevelManager.StarsUpdated += UpdateStarDisplay;
         LevelManager.HealthUpdated += UpdateHealthDisplay;
+        LevelManager.LevelTimerExpired += LevelFinished;
     }
 
     private void Start()
@@ -34,16 +33,10 @@ public class UIManager : MonoBehaviour
         slider = transform.Find("Slider").GetComponent<Slider>();
 
         levelDurationInSec = levelManager.GetLevelDuration();
-    }
+        UpdateHealthDisplay(levelManager.GetHealth());
+        UpdateStarDisplay(levelManager.GetNumOfStars());
 
-    private void Update()
-    {
-        slider.value = Time.timeSinceLevelLoad / levelDurationInSec;
-
-        if (Time.timeSinceLevelLoad >= levelDurationInSec)
-        {
-            levelManager.LevelFinished();
-        }
+        StartCoroutine(UpdateSlider());
     }
 
 
@@ -52,10 +45,19 @@ public class UIManager : MonoBehaviour
         // remove listeners
         LevelManager.StarsUpdated -= UpdateStarDisplay;
         LevelManager.HealthUpdated -= UpdateHealthDisplay;
+        LevelManager.LevelTimerExpired -= LevelFinished;
     }
 
 
-    //******** display updates
+    //******** misc functions
+    private IEnumerator UpdateSlider()
+    {
+        while (!levelFinished)
+        {
+            slider.value = Time.timeSinceLevelLoad / levelDurationInSec;
+            yield return null;
+        }
+    }
 
     private void UpdateHealthDisplay(int currentHealth)
     {
@@ -66,5 +68,7 @@ public class UIManager : MonoBehaviour
     {
         starText.text = numOfStars.ToString();
     }
+
+    private void LevelFinished() { levelFinished = true; }
 
 }

@@ -27,7 +27,7 @@ public class SceneLoader : MonoBehaviour
         LoadNextScene();
     }
 
-    private void LoadNextScene()
+    public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }

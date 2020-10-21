@@ -17,6 +17,14 @@ public class AttackerSpawner : MonoBehaviour
 
     [SerializeField] bool canSpawn = true;  // TODO: serialized for testing
 
+
+    //***** core functions
+    private void OnEnable()
+    {
+        //register listeners
+        LevelManager.LevelTimerExpired += StopSpawning;
+    }
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -31,6 +39,15 @@ public class AttackerSpawner : MonoBehaviour
 
     }
 
+    private void OnDisable()
+    {
+        //remove listeners
+        LevelManager.LevelTimerExpired -= StopSpawning;
+    }
+
+
+
+    // ***** misc functions
     private void spawnAttacker()
     {
         // Pick attacker
@@ -39,6 +56,12 @@ public class AttackerSpawner : MonoBehaviour
         // Spawn
         Attacker newAttacker = Instantiate(attackerPrefabs[attackerIndex], transform.position, Quaternion.identity) as Attacker;
         newAttacker.transform.parent = transform;
+    }
+
+    private void StopSpawning() 
+    { 
+        canSpawn = false;
+        StopAllCoroutines();
     }
 
     public int GetLane() { return lane; }
