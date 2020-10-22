@@ -11,7 +11,8 @@ public class LevelManager : MonoBehaviour
     public static Action LevelTimerExpired;
 
     // configuration variables
-    private bool timerComplete = false;
+    [SerializeField] private bool timerComplete = false;    //TODO: serialized for debugging
+    [SerializeField] private int numOfAttackers = 0;    //TODO: serialized for debugging
 
     [Tooltip("Amount of stars the player starts with.")]
     [SerializeField] private int numOfStars = 10;
@@ -19,18 +20,16 @@ public class LevelManager : MonoBehaviour
     [Tooltip("Initial health the player starts with.")]
     [SerializeField] private int health = 50;
 
-    [Tooltip("Duration of the level in seconds.")]
-    [SerializeField] private float levelDurationInSec = 10f;
-
     [Tooltip("How often the level manager checks to see if level timer is complete.")]
     [SerializeField] private float checkTimerDelay = 0.2f;
 
     [Tooltip("Delay before we change scenes.")]
-    [SerializeField] private float sceneChangeDelay = 10f;
+    [SerializeField] private float sceneChangeDelay = 7f;
 
-    [SerializeField] private int numOfAttackers = 0;    // TODO: serialized for debugging.
-
+    [Tooltip("Duration of the level in seconds.")]
+    [SerializeField] private float levelDurationInSec = 10f;
     [SerializeField] private GameObject levelCompleteCanvas;
+    [SerializeField] private GameObject levelLoseCanvas;
     [SerializeField] AudioClip levelCompleteClip;
 
     // ***** core functions
@@ -38,6 +37,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         levelCompleteCanvas.SetActive(false);
+        levelLoseCanvas.SetActive(false);
         StartCoroutine(CheckTimer());
     }
 
@@ -62,7 +62,7 @@ public class LevelManager : MonoBehaviour
         HealthUpdated?.Invoke(health);
         if (health <= 0)
         {
-            FindObjectOfType<SceneLoader>().LoadGameOverScene();
+            HandleLooseCondition();
         }
     }
 
@@ -99,12 +99,18 @@ public class LevelManager : MonoBehaviour
 
 
 
-    IEnumerator HandleWinCondition()
+    private IEnumerator HandleWinCondition()
     {
         levelCompleteCanvas.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(levelCompleteClip);
         yield return new WaitForSeconds(sceneChangeDelay);
         FindObjectOfType<SceneLoader>().LoadNextScene();
+    }
+
+    private void HandleLooseCondition()
+    {
+        levelLoseCanvas.SetActive(true);
+        Time.timeScale = 0;
     }
 
 

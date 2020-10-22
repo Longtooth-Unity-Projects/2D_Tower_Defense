@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfStars: 10
   health: 50
-  levelDurationInSec: 10
   checkTimerDelay: 0.2
-  sceneChangeDelay: 10
-  numOfAttackers: 0
+  sceneChangeDelay: 7
+  levelDurationInSec: 10
   levelCompleteCanvas: {fileID: 0}
+  levelLoseCanvas: {fileID: 0}
   levelCompleteClip: {fileID: 8300000, guid: c90a5a06a24a9e84db2ba0667f33dc8c, type: 3}
 --- !u!82 &1235241437628031720
 AudioSource:

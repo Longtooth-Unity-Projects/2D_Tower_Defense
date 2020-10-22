@@ -36,7 +36,9 @@ public class Attacker : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindObjectOfType<LevelManager>().RemoveAttacker();
+        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        if (levelManager != null)
+            levelManager.RemoveAttacker();
     }
 
 

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] int splashScreenScene = 0;
-    [SerializeField] float loadSceneDelay = 3f;
+    [SerializeField] const float defaultLoadSceneDelay = 3f;
 
     private int currentSceneIndex;
 
@@ -16,25 +16,37 @@ public class SceneLoader : MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneIndex == splashScreenScene)
-        {
-            StartCoroutine(DelayLoadScene());
-        }
+            LoadNextScene(defaultLoadSceneDelay);
     }
 
-    private IEnumerator DelayLoadScene()
+    private IEnumerator DelayLoadScene(float delay) { yield return new WaitForSeconds(delay); }
+
+    public void LoadMainMenu()
     {
-        yield return new WaitForSeconds(loadSceneDelay);
-        LoadNextScene();
+        Time.timeScale = 1;
+        SceneManager.LoadScene("StartScene");
     }
 
-    public void LoadNextScene()
+    public void LoadNextScene(float delay = defaultLoadSceneDelay)
     {
+        StartCoroutine(DelayLoadScene(delay));
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void LoadGameOverScene()
+    public void RestartScene()
     {
-        SceneManager.LoadScene("GameOverScene");
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 
+    public void LoadGameOverScene(float delay = 0f)
+    {
+        StartCoroutine(DelayLoadScene(delay));
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
