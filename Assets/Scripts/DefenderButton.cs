@@ -8,7 +8,7 @@ public class DefenderButton : MonoBehaviour
 {
     //configuration parameters
     [SerializeField] private Defender defenderPrefab;
-    private DefenderButton[] defenderButtons;   // TODO revisit this implementation for possibly static implmementation
+    private DefenderButton[] defenderButtons;
     private Color32 inactiveColor = new Color32(128, 0, 0, 255);
 
     //cached references
@@ -16,6 +16,7 @@ public class DefenderButton : MonoBehaviour
 
     private void Start()
     {
+        GetComponentInChildren<Text>().text = defenderPrefab.GetCost().ToString();
         defenderButtons = FindObjectsOfType<DefenderButton>();
         defenderSpawner = FindObjectOfType<DefenderSpawner>();
     }

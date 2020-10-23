@@ -40,7 +40,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float baseLevelDuration = 10f;
     [SerializeField] private GameObject levelCompleteCanvas;
     [SerializeField] private GameObject levelLoseCanvas;
-    [SerializeField] AudioClip levelCompleteClip;
+    [SerializeField] AudioClip levelSuccessClip;
+    [SerializeField] AudioClip levelFailClip;
 
     private int health;
     private int stars;
@@ -105,7 +106,9 @@ public class LevelManager : MonoBehaviour
         }
         timerComplete = true;
         LevelTimerExpired?.Invoke();
-    }// end of method CheckWinConditions
+        if (numOfAttackers <= 0)
+            StartCoroutine(HandleWinCondition());
+    }// end of method CheckTimer
 
 
     //*****health display
@@ -155,7 +158,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator HandleWinCondition()
     {
         levelCompleteCanvas.SetActive(true);
-        GetComponent<AudioSource>().PlayOneShot(levelCompleteClip);
+        GetComponent<AudioSource>().PlayOneShot(levelSuccessClip);
         yield return new WaitForSeconds(sceneChangeDelay);
         FindObjectOfType<SceneLoader>().LoadNextScene();
     }
@@ -163,6 +166,7 @@ public class LevelManager : MonoBehaviour
     private void HandleLooseCondition()
     {
         levelLoseCanvas.SetActive(true);
+        GetComponent<AudioSource>().PlayOneShot(levelFailClip);
         Time.timeScale = 0;
     }
 
