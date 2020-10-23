@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelCompleteCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7929475881355738177, guid: 9ccb1dceb2d3e2846a0428c6e6877efd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ccb1dceb2d3e2846a0428c6e6877efd, type: 3}
 --- !u!1 &939983856

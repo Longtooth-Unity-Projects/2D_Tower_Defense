@@ -10,15 +10,25 @@ public class LevelManager : MonoBehaviour
     public static Action<int> HealthUpdated;
     public static Action LevelTimerExpired;
 
+    private const string DEFENDER_CONTAINER_NAME = "DefenderContainer";
+    private const string PROJECTILE_CONTAINER_NAME = "ProjectileContainer";
+    private const string VFX_CONTAINER_NAME = "VFXContainer";
+    //private GameObject defenderContainer;
+    public static GameObject DefenderContainer { get; private set; }
+    public static GameObject ProjectileContainer { get; private set; }
+    public static GameObject VFXContainer { get; private set; }
+
+
+
     // configuration variables
     [SerializeField] private bool timerComplete = false;    //TODO: serialized for debugging
     [SerializeField] private int numOfAttackers = 0;    //TODO: serialized for debugging
 
     [Tooltip("Amount of stars the player starts with.")]
-    [SerializeField] private int numOfStars = 10;
+    [SerializeField] private int baseStars = 10;
 
     [Tooltip("Initial health the player starts with.")]
-    [SerializeField] private int health = 50;
+    [SerializeField] private int baseHealth = 50;
 
     [Tooltip("How often the level manager checks to see if level timer is complete.")]
     [SerializeField] private float checkTimerDelay = 0.2f;
@@ -27,10 +37,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float sceneChangeDelay = 7f;
 
     [Tooltip("Duration of the level in seconds.")]
-    [SerializeField] private float levelDurationInSec = 10f;
+    [SerializeField] private float baseLevelDuration = 10f;
     [SerializeField] private GameObject levelCompleteCanvas;
     [SerializeField] private GameObject levelLoseCanvas;
     [SerializeField] AudioClip levelCompleteClip;
+
+    private int health;
+    private int stars;
+    private float levelDuration;
 
     // ***** core functions
 
@@ -38,7 +52,46 @@ public class LevelManager : MonoBehaviour
     {
         levelCompleteCanvas.SetActive(false);
         levelLoseCanvas.SetActive(false);
-        StartCoroutine(CheckTimer());
+
+        AdjustDifficulty();
+
+        DefenderContainer = new GameObject(DEFENDER_CONTAINER_NAME);
+        ProjectileContainer = new GameObject(PROJECTILE_CONTAINER_NAME);
+        VFXContainer = new GameObject(VFX_CONTAINER_NAME);
+
+    StartCoroutine(CheckTimer());
+    }
+
+    private void AdjustDifficulty()
+    {
+        float difficultyIncreasesValue = 1f;
+        float difficultyDecreasesValue = 1f;
+
+        switch (PlayerPrefsController.GetDifficulty())
+        {
+            case 0:
+                difficultyIncreasesValue = 0.5f;
+                difficultyDecreasesValue = 1.5f;
+                break;
+            case 1:
+                difficultyIncreasesValue = 1f;
+                difficultyDecreasesValue = 1f;
+                break;
+            case 2:
+                difficultyIncreasesValue = 1.5f;
+                difficultyDecreasesValue = 1f;
+                break;
+            case 3:
+                difficultyIncreasesValue = 2f;
+                difficultyDecreasesValue = 0.5f;
+                break;
+            default:
+                break;
+        }// end of switch
+
+        health = Mathf.RoundToInt(baseHealth * difficultyDecreasesValue);
+        stars = Mathf.RoundToInt(baseStars * difficultyDecreasesValue);
+        levelDuration = Mathf.RoundToInt(baseLevelDuration * difficultyIncreasesValue);
     }
 
 
@@ -46,7 +99,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator CheckTimer()
     {
         //due to delay of spawns and destruction, no need to check this every update, so we have an adjustable check routine
-        while (Time.timeSinceLevelLoad <= levelDurationInSec)
+        while (Time.timeSinceLevelLoad <= levelDuration)
         {
             yield return new WaitForSeconds(checkTimerDelay);
         }
@@ -67,22 +120,22 @@ public class LevelManager : MonoBehaviour
     }
 
     //*****star display
-    public bool bHasEnoughStars(int amount) { return numOfStars >= amount; }
+    public bool bHasEnoughStars(int amount) { return stars >= amount; }
 
 
     public void AddStars(int amountToAdd)
     {
-        numOfStars += amountToAdd;
-        StarsUpdated?.Invoke(numOfStars);
+        stars += amountToAdd;
+        StarsUpdated?.Invoke(stars);
     }
 
 
     public void SpendStars(int amount)
     {
-        if (numOfStars >= amount)
+        if (stars >= amount)
         {
-            numOfStars -= amount;
-            StarsUpdated?.Invoke(numOfStars);
+            stars -= amount;
+            StarsUpdated?.Invoke(stars);
         }
     }
 
@@ -114,7 +167,7 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public int GetNumOfStars() { return numOfStars; }
+    public int GetNumOfStars() { return stars; }
     public int GetHealth() { return health; }
-    public float GetLevelDuration() { return levelDurationInSec; }
+    public float GetLevelDuration() { return levelDuration; }
 }

@@ -530,18 +530,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6125337701485353042, guid: 1f075ead992e71849ae2ba03d04488af, type: 3}
-      propertyPath: m_text
-      value: Loading...
-      objectReference: {fileID: 0}
-    - target: {fileID: 6125337701485353042, guid: 1f075ead992e71849ae2ba03d04488af, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6125337701485353042, guid: 1f075ead992e71849ae2ba03d04488af, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8393838858528859827, guid: 1f075ead992e71849ae2ba03d04488af, type: 3}
       propertyPath: m_Name
       value: LoadingText (TMP)

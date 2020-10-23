@@ -5,7 +5,7 @@ using UnityEngine.Assertions.Must;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    Defender defenderToSpawn;
+    private Defender defenderToSpawn;
 
     //cached references
     LevelManager levelManager;
@@ -28,6 +28,7 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 worldPos)
     {
         Defender newDefender = Instantiate(defenderToSpawn, worldPos, Quaternion.identity) as Defender;
+        newDefender.transform.parent = LevelManager.DefenderContainer.transform;
         levelManager.SpendStars(defenderToSpawn.GetCost());
     }
 

@@ -555,15 +555,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 9999
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d8d7d649960f3cf4ba092f53882c8e1b, type: 2}
-  m_sharedMaterial: {fileID: -2249897374183534550, guid: d8d7d649960f3cf4ba092f53882c8e1b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07cbf17cd32b1344aa12f44100705513, type: 2}
+  m_sharedMaterial: {fileID: -2180926572882952151, guid: 07cbf17cd32b1344aa12f44100705513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279697594
-  m_fontColor: {r: 0.7294118, g: 0, b: 0.091757774, a: 1}
+    rgba: 4279632828
+  m_fontColor: {r: 0.7372549, g: 0.011764706, b: 0.08627451, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

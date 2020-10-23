@@ -23,9 +23,9 @@ public class Health : MonoBehaviour
         if (deathVFX)
         {
             GameObject destructionVFXobj = Instantiate(deathVFX, transform.position, transform.rotation);
+            destructionVFXobj.transform.parent = LevelManager.VFXContainer.transform;
             Destroy(destructionVFXobj, vfxDestructionDelay);
         }
-        //Destroyed?.Invoke(scoreValue);
         //AudioSource.PlayClipAtPoint(destructionClip, Camera.main.transform.position, destructionVolumeLevel);
         Destroy(gameObject);
     }

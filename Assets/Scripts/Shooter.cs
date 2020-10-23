@@ -44,6 +44,7 @@ public class Shooter : MonoBehaviour
 
     public void ShootProjectile()
     {
-        Instantiate(projectile, weapon.transform.position, weapon.transform.rotation);
+        Projectile newProjectile = Instantiate(projectile, weapon.transform.position, weapon.transform.rotation);
+        newProjectile.transform.parent = LevelManager.ProjectileContainer.transform;
     }
 }

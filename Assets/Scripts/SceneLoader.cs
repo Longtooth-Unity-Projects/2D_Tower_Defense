@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] int splashScreenScene = 0;
-    [SerializeField] const float defaultLoadSceneDelay = 3f;
+    [SerializeField] const float DEFAULT_LOAD_SCENE_DELAY = 3f;
 
     private int currentSceneIndex;
 
@@ -16,10 +16,13 @@ public class SceneLoader : MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneIndex == splashScreenScene)
-            LoadNextScene(defaultLoadSceneDelay);
+            LoadNextScene();
     }
 
-    private IEnumerator DelayLoadScene(float delay) { yield return new WaitForSeconds(delay); }
+    private IEnumerator DelayLoadScene(float delay) 
+    { 
+        yield return new WaitForSeconds(delay); 
+    }
 
     public void LoadMainMenu()
     {
@@ -27,7 +30,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
-    public void LoadNextScene(float delay = defaultLoadSceneDelay)
+    public void LoadOptionsScene() { SceneManager.LoadScene("OptionsScene"); }
+
+    public void LoadNextScene(float delay = DEFAULT_LOAD_SCENE_DELAY)
     {
         StartCoroutine(DelayLoadScene(delay));
         SceneManager.LoadScene(currentSceneIndex + 1);
