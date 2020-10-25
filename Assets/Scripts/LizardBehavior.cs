@@ -10,7 +10,7 @@ public class LizardBehavior : MonoBehaviour
         Defender possibleDefender = otherObject.GetComponent<Defender>();
         if (possibleDefender)
         {
-            GetComponent<Attacker>().Attack(possibleDefender);
+            StartCoroutine(GetComponent<Attacker>().Attack(possibleDefender));
         }
     }
 }

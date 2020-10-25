@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [Range(0, 5)] [SerializeField] int damage = 1;
+    [Tooltip("Amount of damage caused each attack period indicated by the attack speed.")]
+    [Range(0, 5)] [SerializeField] int attackDamage = 1;
+    [Range(1, 5)] [SerializeField] float attackSpeed = 0.5f;
     [Range(0f, 5f)] [SerializeField] float movementSpeed = 1f;
     private float currentMovementSpeed = 0f;
 
@@ -30,7 +32,7 @@ public class Attacker : MonoBehaviour
     void Update()
     {
         //move each frame
-        transform.Translate(Vector2.left * Time.deltaTime * currentMovementSpeed);  // TODO: Remove this from update. Use rigid body method by making start move and stop move functions.
+        transform.Translate(Vector2.left * Time.deltaTime * currentMovementSpeed);  // TODO: see if rigid body method by making start move and stop move functions is more efficient.
     }
 
 
@@ -44,59 +46,42 @@ public class Attacker : MonoBehaviour
 
 
 
-    // ***** other functions
+    // ***** misc functions
 
-    public void StartMove()
-    {
-        currentMovementSpeed = movementSpeed;
-    }
 
-    public void StopMove()
-    {
-        currentMovementSpeed = 0f;
-    }
+    //***** attack series of animations
 
     /// <summary>
     /// If this is called, it is from the specific behavior script attached to the object (i.e. the lizard behavior script)
     /// </summary>
     /// <param name="targetDefender"></param>
-    public void Attack(Defender targetDefender)
+    public IEnumerator Attack(Defender targetDefender)
     {
         myAnimator.SetBool("bIsAttacking", true);
+
         currentTarget = targetDefender;
-    }
+        Health targetHealth = currentTarget.GetComponent<Health>();
 
-
-    // TODO: decouple these from the animations. Make a continous damage function but have the animations still check if there is a target
-
-    /// <summary>
-    /// This gets called via an attack animation event
-    /// </summary>
-    public void AnimatorDamageTarget()
-    {
-        if (!currentTarget) 
+        while (currentTarget)
         {
-            myAnimator.SetBool("bIsAttacking", false);
-            return; 
+            if (targetHealth)
+                targetHealth.TakeDamage(attackDamage);
+
+            yield return new WaitForSeconds(attackSpeed);
         }
 
-        Health targetHealth = currentTarget.GetComponent<Health>();
-        if (targetHealth)
-            targetHealth.TakeDamage(damage);
+        myAnimator.SetBool("bIsAttacking", false);
     }
 
 
-    private void AnimatorCheckTarget()
-    {
-        if (!currentTarget)
-            myAnimator.SetBool("bIsAttacking", false);
-    }
+    public void StartMove() { currentMovementSpeed = movementSpeed; }
 
-    public void SetCurrentMovementSpeed(float newSpeed)
-    {
-        currentMovementSpeed = newSpeed;
-    }
+    public void StopMove() { currentMovementSpeed = 0f; }
 
-    public int GetDamage() { return damage; }
+    //***** setters/getters
+
+    public void SetCurrentMovementSpeed(float newSpeed) { currentMovementSpeed = newSpeed; }
+
+    public int GetDamage() { return attackDamage; }
 
 }

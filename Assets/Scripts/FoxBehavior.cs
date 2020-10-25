@@ -15,7 +15,7 @@ public class FoxBehavior : MonoBehaviour
             if (possibleDefender.GetComponent<GravestoneBehavior>())
                 GetComponent<Animator>().SetTrigger("JumpTrigger");
             else
-                GetComponent<Attacker>().Attack(possibleDefender);
+                StartCoroutine(GetComponent<Attacker>().Attack(possibleDefender));
         }
     }// end of method OnTriggerEnter2D
 }
