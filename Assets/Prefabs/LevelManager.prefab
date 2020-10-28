@@ -44,13 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464576901bfe89c48bab65fba313ff46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerComplete: 0
-  numOfAttackers: 0
-  baseStars: 10
+  baseStars: 40
   baseHealth: 50
+  baseLevelDuration: 60
   checkTimerDelay: 0.2
   sceneChangeDelay: 7
-  baseLevelDuration: 10
   levelCompleteCanvas: {fileID: 0}
   levelLoseCanvas: {fileID: 0}
   levelSuccessClip: {fileID: 8300000, guid: 8b12ca03607a3ba458e258a45cfe8d34, type: 3}

@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] int splashScreenScene = 0;
-    [SerializeField] const float DEFAULT_LOAD_SCENE_DELAY = 3f;
+    const float DEFAULT_LOAD_SCENE_DELAY = 0f;
 
+    [SerializeField] private int splashScreenScene = 0;
+    private float splashScreenDelay = 4f;
     private int currentSceneIndex;
 
 
@@ -16,38 +17,47 @@ public class SceneLoader : MonoBehaviour
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (currentSceneIndex == splashScreenScene)
-            LoadNextScene();
-    }
-
-    private IEnumerator DelayLoadScene(float delay) 
-    { 
-        yield return new WaitForSeconds(delay); 
+            LoadNextScene(splashScreenDelay);
     }
 
     public void LoadMainMenu()
     {
+        StartCoroutine(LoadScene("StartScene"));
+    }
+
+    public void LoadOptionsScene() 
+    { 
+        StartCoroutine(LoadScene("OptionsScene")); 
+    }
+
+    public void LoadNextScene(float delay = DEFAULT_LOAD_SCENE_DELAY) 
+    { 
+        StartCoroutine(LoadScene(currentSceneIndex + 1, delay)); 
+    }
+
+    public void RestartScene() 
+    {
+        StartCoroutine(LoadScene(currentSceneIndex));
+    }
+
+    public void LoadGameOverScene(float delay = DEFAULT_LOAD_SCENE_DELAY)
+    {
+        StartCoroutine(LoadScene("GameOverScene", delay));
+    }
+
+
+    private IEnumerator LoadScene(int sceneIndex, float delay = DEFAULT_LOAD_SCENE_DELAY)
+    {
         Time.timeScale = 1;
-        SceneManager.LoadScene("StartScene");
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneIndex);
     }
 
-    public void LoadOptionsScene() { SceneManager.LoadScene("OptionsScene"); }
-
-    public void LoadNextScene(float delay = DEFAULT_LOAD_SCENE_DELAY)
-    {
-        StartCoroutine(DelayLoadScene(delay));
-        SceneManager.LoadScene(currentSceneIndex + 1);
-    }
-
-    public void RestartScene()
+    private IEnumerator LoadScene(string sceneName, float delay = DEFAULT_LOAD_SCENE_DELAY)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(currentSceneIndex);
-    }
-
-    public void LoadGameOverScene(float delay = 0f)
-    {
-        StartCoroutine(DelayLoadScene(delay));
-        SceneManager.LoadScene("GameOverScene");
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()

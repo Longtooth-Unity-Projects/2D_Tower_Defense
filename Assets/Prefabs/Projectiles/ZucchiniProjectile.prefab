@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 1805758227}
   - component: {fileID: 5209254768315762808}
   - component: {fileID: -3735200133584838168}
-  - component: {fileID: 6400734971929872325}
   m_Layer: 0
   m_Name: ZucchiniProjectile
   m_TagString: Untagged
@@ -131,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 3
   spinDegPerSec: -200
-  damage: 1
+  damage: 2
 --- !u!50 &5209254768315762808
 Rigidbody2D:
   serializedVersion: 4
@@ -188,22 +187,3 @@ PolygonCollider2D:
       - {x: -0.0006971359, y: -0.013412952}
       - {x: 0.10309839, y: -0.15720356}
       - {x: 0.109802425, y: -0.15922236}
---- !u!95 &6400734971929872325
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6101209154191299768}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

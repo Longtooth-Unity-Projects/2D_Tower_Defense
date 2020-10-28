@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 3
   spinDegPerSec: -200
-  damage: 1
+  damage: 7
 --- !u!50 &5209254768315762808
 Rigidbody2D:
   serializedVersion: 4

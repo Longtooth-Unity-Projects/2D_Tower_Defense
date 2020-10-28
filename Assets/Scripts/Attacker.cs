@@ -6,8 +6,8 @@ public class Attacker : MonoBehaviour
 {
     [Header("Attacker Fields")]
     [Tooltip("Amount of damage caused each attack period indicated by the attack speed.")]
-    [Range(0, 50)] [SerializeField] int attackDamage = 1;
-    [Range(1, 5)] [SerializeField] float attackDelay = 0.5f;
+    [Range(0, 50)] [SerializeField] int meleeDamage = 1;
+    [Range(1, 5)] [SerializeField] float meleeAttackDelay = 0.5f;
     [Range(0f, 5f)] [SerializeField] float movementSpeed = 1f;
     private float currentMovementSpeed = 0f;
 
@@ -56,7 +56,6 @@ public class Attacker : MonoBehaviour
 
 
     //***** attack series of animations
-
     /// <summary>
     /// If this is called, it is from the specific behavior script attached to the object (i.e. the lizard behavior script)
     /// </summary>
@@ -65,23 +64,23 @@ public class Attacker : MonoBehaviour
     {
         myAnimator.SetBool("bIsAttacking", true);
 
-        currentTarget = targetDefender;
-        Health targetHealth = currentTarget.GetComponent<Health>();
-
-        while (currentTarget)
+        while (targetDefender)
         {
-            if (targetHealth)
-                targetHealth.TakeDamage(attackDamage);
-
-            yield return new WaitForSeconds(attackDelay);
+            targetDefender.TakeDamage(meleeDamage);
+            yield return new WaitForSeconds(meleeAttackDelay);
         }
 
         myAnimator.SetBool("bIsAttacking", false);
     }
 
-
+    /// <summary>
+    /// Called from animation
+    /// </summary>
     public void StartMove() { currentMovementSpeed = movementSpeed; }
 
+    /// <summary>
+    /// Called from animation
+    /// </summary>
     public void StopMove() { currentMovementSpeed = 0f; }
 
 
@@ -111,6 +110,6 @@ public class Attacker : MonoBehaviour
 
     public void SetCurrentMovementSpeed(float newSpeed) { currentMovementSpeed = newSpeed; }
 
-    public int GetDamage() { return attackDamage; }
+    public int GetDamage() { return meleeDamage; }
 
 }

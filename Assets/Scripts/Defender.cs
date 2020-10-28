@@ -6,6 +6,9 @@ public class Defender : MonoBehaviour
 {
     [Header("Defender Fields")]
     [SerializeField] private int cost = 1;
+    [Tooltip("Amount of damage caused each attack period indicated by the attack speed.")]
+    [Range(0, 50)] [SerializeField] int meleeDamage = 1;
+    [Range(1, 5)] [SerializeField] float attackDelay = 0.5f;
 
     [Header("Health Fields")]
     [SerializeField] private int health = 1;

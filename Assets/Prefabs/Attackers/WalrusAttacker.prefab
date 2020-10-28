@@ -92,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5903613084132388993}
   - component: {fileID: 5903613084132388992}
-  - component: {fileID: 5903613084132388999}
   - component: {fileID: 5903613084132388998}
   - component: {fileID: 5903613084132388997}
   - component: {fileID: 5903613084132388996}
@@ -131,21 +130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3785c194e27e4409538cee81570969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
-  attackDelay: 0.5
+  meleeDamage: 10
+  meleeAttackDelay: 0.5
   movementSpeed: 0.5
---- !u!114 &5903613084132388999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903613084132389002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1a3e6218f37b746883887cd3c228fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   health: 25
   deathVFX: {fileID: 625836823627296945, guid: 33750a191eaf8994a82ce252d6a33246, type: 3}
   vfxDestructionDelay: 1

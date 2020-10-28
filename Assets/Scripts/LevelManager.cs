@@ -13,22 +13,24 @@ public class LevelManager : MonoBehaviour
     private const string DEFENDER_CONTAINER_NAME = "DefenderContainer";
     private const string PROJECTILE_CONTAINER_NAME = "ProjectileContainer";
     private const string VFX_CONTAINER_NAME = "VFXContainer";
-    //private GameObject defenderContainer;
+
     public static GameObject DefenderContainer { get; private set; }
     public static GameObject ProjectileContainer { get; private set; }
     public static GameObject VFXContainer { get; private set; }
 
+    private bool timerComplete = false;
+    private int numOfAttackers = 0;
 
 
     // configuration variables
-    [SerializeField] private bool timerComplete = false;    //TODO: serialized for debugging
-    [SerializeField] private int numOfAttackers = 0;    //TODO: serialized for debugging
-
     [Tooltip("Amount of stars the player starts with.")]
-    [SerializeField] private int baseStars = 10;
+    [SerializeField] private int baseStars = 40;
 
     [Tooltip("Initial health the player starts with.")]
     [SerializeField] private int baseHealth = 50;
+
+    [Tooltip("Duration of the level in seconds.")]
+    [SerializeField] private float baseLevelDuration = 60f;
 
     [Tooltip("How often the level manager checks to see if level timer is complete.")]
     [SerializeField] private float checkTimerDelay = 0.2f;
@@ -36,8 +38,6 @@ public class LevelManager : MonoBehaviour
     [Tooltip("Delay before we change scenes.")]
     [SerializeField] private float sceneChangeDelay = 7f;
 
-    [Tooltip("Duration of the level in seconds.")]
-    [SerializeField] private float baseLevelDuration = 10f;
     [SerializeField] private GameObject levelCompleteCanvas;
     [SerializeField] private GameObject levelLoseCanvas;
     [SerializeField] AudioClip levelSuccessClip;
@@ -107,7 +107,7 @@ public class LevelManager : MonoBehaviour
         timerComplete = true;
         LevelTimerExpired?.Invoke();
         if (numOfAttackers <= 0)
-            StartCoroutine(HandleWinCondition());
+            HandleWinCondition();
     }// end of method CheckTimer
 
 
@@ -150,24 +150,23 @@ public class LevelManager : MonoBehaviour
         numOfAttackers--;
 
         if ((numOfAttackers <= 0) && timerComplete)
-            StartCoroutine(HandleWinCondition());
+            HandleWinCondition();
     }
 
 
 
-    private IEnumerator HandleWinCondition()
+    private void HandleWinCondition()
     {
         levelCompleteCanvas.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(levelSuccessClip);
-        yield return new WaitForSeconds(sceneChangeDelay);
-        FindObjectOfType<SceneLoader>().LoadNextScene();
+        FindObjectOfType<SceneLoader>().LoadNextScene(sceneChangeDelay);
     }
 
     private void HandleLooseCondition()
     {
+        Time.timeScale = 0;
         levelLoseCanvas.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(levelFailClip);
-        Time.timeScale = 0;
     }
 
 

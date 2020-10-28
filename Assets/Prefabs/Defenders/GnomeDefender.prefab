@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4977135529013625086}
   - component: {fileID: 3427059696125904915}
-  - component: {fileID: -3496608393895891675}
   - component: {fileID: 4977135529013625087}
   - component: {fileID: 4977135529013625057}
   - component: {fileID: 7183977609808350453}
@@ -161,21 +160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b41c2fabb3089d42b1231868c8a3478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 1
---- !u!114 &-3496608393895891675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4977135529013625059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1a3e6218f37b746883887cd3c228fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  deathVFX: {fileID: 0}
+  cost: 15
+  meleeDamage: 0
+  attackDelay: 0.5
+  health: 5
+  deathVFX: {fileID: 625836823627296945, guid: 33750a191eaf8994a82ce252d6a33246, type: 3}
   vfxDestructionDelay: 1
 --- !u!114 &4977135529013625087
 MonoBehaviour:

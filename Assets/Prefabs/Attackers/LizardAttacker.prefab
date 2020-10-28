@@ -92,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6929870933837269833}
   - component: {fileID: 6929870933837269834}
-  - component: {fileID: -7346645358726832864}
   - component: {fileID: -5308996844178035767}
   - component: {fileID: 6929870933837269839}
   - component: {fileID: 7904529412166736577}
@@ -134,18 +133,6 @@ MonoBehaviour:
   attackDamage: 5
   attackDelay: 0.5
   movementSpeed: 1
---- !u!114 &-7346645358726832864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6929870933837269838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1a3e6218f37b746883887cd3c228fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   health: 5
   deathVFX: {fileID: 625836823627296945, guid: f5f5192e7a2dc874693b0820717c1c65, type: 3}
   vfxDestructionDelay: 1
