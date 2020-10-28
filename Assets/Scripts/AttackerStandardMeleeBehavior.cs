@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LizardBehavior : MonoBehaviour
+public class AttackerStandardMeleeBehavior : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D otherCollider)
     {

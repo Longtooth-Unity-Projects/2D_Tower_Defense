@@ -122,6 +122,126 @@ TextureImporter:
   - first:
       213: -8190173729973596322
     second: Batterfly Flying_39
+  - first:
+      213: 498653109086934645
+    second: Batterfly Flying_0
+  - first:
+      213: -9175135117002900706
+    second: Batterfly Flying_1
+  - first:
+      213: -1448794259657348877
+    second: Batterfly Flying_2
+  - first:
+      213: 8043200020325461361
+    second: Batterfly Flying_3
+  - first:
+      213: 7891177866060842378
+    second: Batterfly Flying_4
+  - first:
+      213: -6098644869630240284
+    second: Batterfly Flying_5
+  - first:
+      213: 8903249434176396373
+    second: Batterfly Flying_6
+  - first:
+      213: 3228749405868371989
+    second: Batterfly Flying_7
+  - first:
+      213: 6947404653529413719
+    second: Batterfly Flying_8
+  - first:
+      213: 1255070724586106875
+    second: Batterfly Flying_9
+  - first:
+      213: -9039277369633570384
+    second: Batterfly Flying_10
+  - first:
+      213: -597266053432386672
+    second: Batterfly Flying_11
+  - first:
+      213: 3932854497436956975
+    second: Batterfly Flying_12
+  - first:
+      213: -8518722124123184577
+    second: Batterfly Flying_13
+  - first:
+      213: 1312221775035296762
+    second: Batterfly Flying_14
+  - first:
+      213: -8751457181958264345
+    second: Batterfly Flying_15
+  - first:
+      213: -3753389157316768170
+    second: Batterfly Flying_16
+  - first:
+      213: -1849230296070562414
+    second: Batterfly Flying_17
+  - first:
+      213: 8239269729159638809
+    second: Batterfly Flying_18
+  - first:
+      213: -51572290455767478
+    second: Batterfly Flying_19
+  - first:
+      213: 7756316400031857605
+    second: Batterfly Flying_20
+  - first:
+      213: -1136307318318039925
+    second: Batterfly Flying_21
+  - first:
+      213: -8135344513544609210
+    second: Batterfly Flying_22
+  - first:
+      213: 526777101611475499
+    second: Batterfly Flying_23
+  - first:
+      213: -5307418299481349119
+    second: Batterfly Flying_24
+  - first:
+      213: 983627051511998628
+    second: Batterfly Flying_25
+  - first:
+      213: 1197507009952289723
+    second: Batterfly Flying_26
+  - first:
+      213: 1019785982501232885
+    second: Batterfly Flying_27
+  - first:
+      213: 9062394958601033861
+    second: Batterfly Flying_28
+  - first:
+      213: 7875563411260682204
+    second: Batterfly Flying_29
+  - first:
+      213: -1126300065842564381
+    second: Batterfly Flying_30
+  - first:
+      213: -8529759489541600779
+    second: Batterfly Flying_31
+  - first:
+      213: -2798724922004009169
+    second: Batterfly Flying_32
+  - first:
+      213: 6694184288407389006
+    second: Batterfly Flying_33
+  - first:
+      213: -220484881467259647
+    second: Batterfly Flying_34
+  - first:
+      213: 8318665835524815693
+    second: Batterfly Flying_35
+  - first:
+      213: 5018555008338850162
+    second: Batterfly Flying_36
+  - first:
+      213: 4964837638374621772
+    second: Batterfly Flying_37
+  - first:
+      213: -869191764371546516
+    second: Batterfly Flying_38
+  - first:
+      213: -2473441570834153632
+    second: Batterfly Flying_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -236,10 +356,10 @@ TextureImporter:
       name: Batterfly Flying_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 414
-        width: 76
-        height: 66
+        x: 0
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +367,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6f7420ed69d8d00800000000000000
-      internalID: 976602574474442408
+      spriteID: 57655495c529be600800000000000000
+      internalID: 498653109086934645
       vertices: []
       indices: 
       edges: []
@@ -257,10 +377,10 @@ TextureImporter:
       name: Batterfly Flying_1
       rect:
         serializedVersion: 2
-        x: 129
-        y: 415
-        width: 75
-        height: 57
+        x: 111
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +388,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4390659b028f2bad0800000000000000
-      internalID: -2687813208154699468
+      spriteID: e1b74d8193f5ba080800000000000000
+      internalID: -9175135117002900706
       vertices: []
       indices: 
       edges: []
@@ -278,10 +398,10 @@ TextureImporter:
       name: Batterfly Flying_2
       rect:
         serializedVersion: 2
-        x: 244
-        y: 399
-        width: 71
-        height: 40
+        x: 222
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +409,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6924ffbb735902f00800000000000000
-      internalID: 1090035176433468054
+      spriteID: 3f8af700c49d4ebe0800000000000000
+      internalID: -1448794259657348877
       vertices: []
       indices: 
       edges: []
@@ -299,10 +419,10 @@ TextureImporter:
       name: Batterfly Flying_3
       rect:
         serializedVersion: 2
-        x: 358
-        y: 390
-        width: 68
-        height: 51
+        x: 333
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +430,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2092c7c032a60830800000000000000
-      internalID: 4037092446377775149
+      spriteID: 17de9e4cdcf2f9f60800000000000000
+      internalID: 8043200020325461361
       vertices: []
       indices: 
       edges: []
@@ -320,10 +440,10 @@ TextureImporter:
       name: Batterfly Flying_4
       rect:
         serializedVersion: 2
-        x: 471
-        y: 385
-        width: 66
-        height: 57
+        x: 444
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,8 +451,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83dc14db29f8c6630800000000000000
-      internalID: 3921667235936062776
+      spriteID: a854bfdb578138d60800000000000000
+      internalID: 7891177866060842378
       vertices: []
       indices: 
       edges: []
@@ -341,10 +461,10 @@ TextureImporter:
       name: Batterfly Flying_5
       rect:
         serializedVersion: 2
-        x: 582
+        x: 555
         y: 384
-        width: 66
-        height: 58
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,8 +472,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54add07eeeb6ea280800000000000000
-      internalID: -9030161529008432571
+      spriteID: 4e95e669dc24d5ba0800000000000000
+      internalID: -6098644869630240284
       vertices: []
       indices: 
       edges: []
@@ -362,10 +482,10 @@ TextureImporter:
       name: Batterfly Flying_6
       rect:
         serializedVersion: 2
-        x: 689
-        y: 395
-        width: 70
-        height: 47
+        x: 666
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,8 +493,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65a71bb2120bf8070800000000000000
-      internalID: 8110895110431013462
+      spriteID: 55c18ce5032be8b70800000000000000
+      internalID: 8903249434176396373
       vertices: []
       indices: 
       edges: []
@@ -383,10 +503,10 @@ TextureImporter:
       name: Batterfly Flying_7
       rect:
         serializedVersion: 2
-        x: 793
-        y: 416
-        width: 77
-        height: 47
+        x: 777
+        y: 384
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,8 +514,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2d0e9961a2a23250800000000000000
-      internalID: 5922975274091023662
+      spriteID: 510b98d5a72decc20800000000000000
+      internalID: 3228749405868371989
       vertices: []
       indices: 
       edges: []
@@ -404,10 +524,10 @@ TextureImporter:
       name: Batterfly Flying_8
       rect:
         serializedVersion: 2
-        x: 16
-        y: 320
-        width: 77
-        height: 58
+        x: 0
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,8 +535,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68278b97a763defd0800000000000000
-      internalID: -2311131134115155322
+      spriteID: 758348439b32a6060800000000000000
+      internalID: 6947404653529413719
       vertices: []
       indices: 
       edges: []
@@ -425,10 +545,10 @@ TextureImporter:
       name: Batterfly Flying_9
       rect:
         serializedVersion: 2
-        x: 128
-        y: 319
-        width: 76
-        height: 64
+        x: 111
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,8 +556,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f177e240ccc2cd1f0800000000000000
-      internalID: -1018890160937470177
+      spriteID: bff62f2ac28ea6110800000000000000
+      internalID: 1255070724586106875
       vertices: []
       indices: 
       edges: []
@@ -446,10 +566,10 @@ TextureImporter:
       name: Batterfly Flying_10
       rect:
         serializedVersion: 2
-        x: 239
-        y: 318
-        width: 76
-        height: 66
+        x: 222
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,8 +577,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fe11029366d314f0800000000000000
-      internalID: -859107380757979402
+      spriteID: 0b183ccdf190e8280800000000000000
+      internalID: -9039277369633570384
       vertices: []
       indices: 
       edges: []
@@ -467,10 +587,10 @@ TextureImporter:
       name: Batterfly Flying_11
       rect:
         serializedVersion: 2
-        x: 351
-        y: 319
-        width: 75
-        height: 57
+        x: 333
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,8 +598,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d89fef3f4c6944440800000000000000
-      internalID: 4919222465646754189
+      spriteID: 09b53c850b516b7f0800000000000000
+      internalID: -597266053432386672
       vertices: []
       indices: 
       edges: []
@@ -488,10 +608,10 @@ TextureImporter:
       name: Batterfly Flying_12
       rect:
         serializedVersion: 2
-        x: 466
-        y: 303
-        width: 71
-        height: 40
+        x: 444
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,8 +619,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60ad138577ac23cd0800000000000000
-      internalID: -2579777022600291834
+      spriteID: f29f609045e449630800000000000000
+      internalID: 3932854497436956975
       vertices: []
       indices: 
       edges: []
@@ -509,10 +629,10 @@ TextureImporter:
       name: Batterfly Flying_13
       rect:
         serializedVersion: 2
-        x: 580
-        y: 294
-        width: 68
-        height: 51
+        x: 555
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,8 +640,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c204521ebb0062ff0800000000000000
-      internalID: -61360737986723796
+      spriteID: f32606bbc5b67c980800000000000000
+      internalID: -8518722124123184577
       vertices: []
       indices: 
       edges: []
@@ -530,10 +650,10 @@ TextureImporter:
       name: Batterfly Flying_14
       rect:
         serializedVersion: 2
-        x: 693
-        y: 289
-        width: 66
-        height: 57
+        x: 666
+        y: 288
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,8 +661,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdccfc4f0ffd8ef30800000000000000
-      internalID: 4605176844978736347
+      spriteID: afbe28f70c2f53210800000000000000
+      internalID: 1312221775035296762
       vertices: []
       indices: 
       edges: []
@@ -551,10 +671,10 @@ TextureImporter:
       name: Batterfly Flying_15
       rect:
         serializedVersion: 2
-        x: 804
+        x: 777
         y: 288
-        width: 66
-        height: 58
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,8 +682,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c628b29b60509a20800000000000000
-      internalID: 3067039769192572609
+      spriteID: 7e9265a6f049c8680800000000000000
+      internalID: -8751457181958264345
       vertices: []
       indices: 
       edges: []
@@ -572,10 +692,10 @@ TextureImporter:
       name: Batterfly Flying_16
       rect:
         serializedVersion: 2
-        x: 23
-        y: 203
-        width: 70
-        height: 47
+        x: 0
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,8 +703,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eec5baa05f2028b80800000000000000
-      internalID: -8394143503995937554
+      spriteID: 65ec45e927849ebc0800000000000000
+      internalID: -3753389157316768170
       vertices: []
       indices: 
       edges: []
@@ -593,10 +713,10 @@ TextureImporter:
       name: Batterfly Flying_17
       rect:
         serializedVersion: 2
-        x: 127
-        y: 224
-        width: 77
-        height: 47
+        x: 111
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,8 +724,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97ec27d0524200d70800000000000000
-      internalID: 9007238996299009657
+      spriteID: 29dd2d6e7d63656e0800000000000000
+      internalID: -1849230296070562414
       vertices: []
       indices: 
       edges: []
@@ -614,10 +734,10 @@ TextureImporter:
       name: Batterfly Flying_18
       rect:
         serializedVersion: 2
-        x: 238
-        y: 224
-        width: 77
-        height: 58
+        x: 222
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,8 +745,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01c36500331c3aa60800000000000000
-      internalID: 7684197814017342480
+      spriteID: 91f60374a24c75270800000000000000
+      internalID: 8239269729159638809
       vertices: []
       indices: 
       edges: []
@@ -635,10 +755,10 @@ TextureImporter:
       name: Batterfly Flying_19
       rect:
         serializedVersion: 2
-        x: 350
-        y: 223
-        width: 76
-        height: 64
+        x: 333
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,8 +766,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298f98c57e14e02d0800000000000000
-      internalID: -3310636214124939118
+      spriteID: a46712b6647c84ff0800000000000000
+      internalID: -51572290455767478
       vertices: []
       indices: 
       edges: []
@@ -656,10 +776,10 @@ TextureImporter:
       name: Batterfly Flying_20
       rect:
         serializedVersion: 2
-        x: 461
-        y: 222
-        width: 76
-        height: 66
+        x: 444
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,8 +787,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a5a5d4b628d7380800000000000000
-      internalID: -8971871485281281411
+      spriteID: 5cb7f6dcba8f3ab60800000000000000
+      internalID: 7756316400031857605
       vertices: []
       indices: 
       edges: []
@@ -677,10 +797,10 @@ TextureImporter:
       name: Batterfly Flying_21
       rect:
         serializedVersion: 2
-        x: 573
-        y: 223
-        width: 75
-        height: 57
+        x: 555
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,8 +808,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07bd130ca6b8b54e0800000000000000
-      internalID: -1991845119574025360
+      spriteID: b8cf9ffa3860b30f0800000000000000
+      internalID: -1136307318318039925
       vertices: []
       indices: 
       edges: []
@@ -698,10 +818,10 @@ TextureImporter:
       name: Batterfly Flying_22
       rect:
         serializedVersion: 2
-        x: 688
-        y: 207
-        width: 71
-        height: 40
+        x: 666
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,8 +829,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3836d90b859dfebe0800000000000000
-      internalID: -1445697980419185789
+      spriteID: 64220c09443791f80800000000000000
+      internalID: -8135344513544609210
       vertices: []
       indices: 
       edges: []
@@ -719,10 +839,10 @@ TextureImporter:
       name: Batterfly Flying_23
       rect:
         serializedVersion: 2
-        x: 802
-        y: 198
-        width: 68
-        height: 51
+        x: 777
+        y: 192
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,8 +850,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1206e6bbbabcb6f0800000000000000
-      internalID: -667453329367498210
+      spriteID: b22ac51abfc7f4700800000000000000
+      internalID: 526777101611475499
       vertices: []
       indices: 
       edges: []
@@ -740,10 +860,10 @@ TextureImporter:
       name: Batterfly Flying_24
       rect:
         serializedVersion: 2
-        x: 27
-        y: 97
-        width: 66
-        height: 57
+        x: 0
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -751,8 +871,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8585a683219b2140800000000000000
-      internalID: 4696006618232751499
+      spriteID: 104a1013d234856b0800000000000000
+      internalID: -5307418299481349119
       vertices: []
       indices: 
       edges: []
@@ -761,10 +881,10 @@ TextureImporter:
       name: Batterfly Flying_25
       rect:
         serializedVersion: 2
-        x: 138
+        x: 111
         y: 96
-        width: 66
-        height: 58
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -772,8 +892,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f884ab568d702ddd0800000000000000
-      internalID: -2462897420217202545
+      spriteID: 4a866d4879b86ad00800000000000000
+      internalID: 983627051511998628
       vertices: []
       indices: 
       edges: []
@@ -782,10 +902,10 @@ TextureImporter:
       name: Batterfly Flying_26
       rect:
         serializedVersion: 2
-        x: 245
-        y: 107
-        width: 70
-        height: 47
+        x: 222
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -793,8 +913,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9425fd99596cc2c80800000000000000
-      internalID: -8346077663590395319
+      spriteID: bb31f38e7466e9010800000000000000
+      internalID: 1197507009952289723
       vertices: []
       indices: 
       edges: []
@@ -803,10 +923,10 @@ TextureImporter:
       name: Batterfly Flying_27
       rect:
         serializedVersion: 2
-        x: 349
-        y: 128
-        width: 77
-        height: 47
+        x: 333
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,8 +934,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c5457343b272fa50800000000000000
-      internalID: 6553426522033964487
+      spriteID: 5f0a8e1b2f1072e00800000000000000
+      internalID: 1019785982501232885
       vertices: []
       indices: 
       edges: []
@@ -824,10 +944,10 @@ TextureImporter:
       name: Batterfly Flying_28
       rect:
         serializedVersion: 2
-        x: 460
-        y: 128
-        width: 77
-        height: 58
+        x: 444
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -835,8 +955,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f93fd8f9554a02650800000000000000
-      internalID: 6206140974172599199
+      spriteID: 58894b1433814cd70800000000000000
+      internalID: 9062394958601033861
       vertices: []
       indices: 
       edges: []
@@ -845,10 +965,10 @@ TextureImporter:
       name: Batterfly Flying_29
       rect:
         serializedVersion: 2
-        x: 572
-        y: 127
-        width: 76
-        height: 64
+        x: 555
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -856,8 +976,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebdcefe4f800b5500800000000000000
-      internalID: 385902808575954366
+      spriteID: cdfa14e223f9b4d60800000000000000
+      internalID: 7875563411260682204
       vertices: []
       indices: 
       edges: []
@@ -866,10 +986,10 @@ TextureImporter:
       name: Batterfly Flying_30
       rect:
         serializedVersion: 2
-        x: 683
-        y: 126
-        width: 76
-        height: 66
+        x: 666
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -877,8 +997,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3e8cef42ad1c7b10800000000000000
-      internalID: 1980490519098986046
+      spriteID: 3e274f8be049e50f0800000000000000
+      internalID: -1126300065842564381
       vertices: []
       indices: 
       edges: []
@@ -887,10 +1007,10 @@ TextureImporter:
       name: Batterfly Flying_31
       rect:
         serializedVersion: 2
-        x: 795
-        y: 127
-        width: 75
-        height: 57
+        x: 777
+        y: 96
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,8 +1018,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89cdea5f2669c5f70800000000000000
-      internalID: 9177375492447067288
+      spriteID: 5f90b56dfe430a980800000000000000
+      internalID: -8529759489541600779
       vertices: []
       indices: 
       edges: []
@@ -908,10 +1028,10 @@ TextureImporter:
       name: Batterfly Flying_32
       rect:
         serializedVersion: 2
-        x: 22
-        y: 15
-        width: 71
-        height: 40
+        x: 0
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -919,8 +1039,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99a3412214d21c40800000000000000
-      internalID: 5481676870795897245
+      spriteID: f2f0beff28ee829d0800000000000000
+      internalID: -2798724922004009169
       vertices: []
       indices: 
       edges: []
@@ -929,10 +1049,10 @@ TextureImporter:
       name: Batterfly Flying_33
       rect:
         serializedVersion: 2
-        x: 136
-        y: 6
-        width: 68
-        height: 51
+        x: 111
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,8 +1060,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d706ae0076e0c1a0800000000000000
-      internalID: -6791174869118220334
+      spriteID: e43068b942586ec50800000000000000
+      internalID: 6694184288407389006
       vertices: []
       indices: 
       edges: []
@@ -950,10 +1070,10 @@ TextureImporter:
       name: Batterfly Flying_34
       rect:
         serializedVersion: 2
-        x: 249
-        y: 1
-        width: 66
-        height: 57
+        x: 222
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,8 +1081,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44f641e733a66eec0800000000000000
-      internalID: -3538023687861801148
+      spriteID: 105ccc12b2ea0fcf0800000000000000
+      internalID: -220484881467259647
       vertices: []
       indices: 
       edges: []
@@ -971,10 +1091,10 @@ TextureImporter:
       name: Batterfly Flying_35
       rect:
         serializedVersion: 2
-        x: 360
+        x: 333
         y: 0
-        width: 66
-        height: 58
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,8 +1102,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02cd1f0f6cdc4d460800000000000000
-      internalID: 7265658353185053728
+      spriteID: d4b72a3d086d17370800000000000000
+      internalID: 8318665835524815693
       vertices: []
       indices: 
       edges: []
@@ -992,10 +1112,10 @@ TextureImporter:
       name: Batterfly Flying_36
       rect:
         serializedVersion: 2
-        x: 467
-        y: 11
-        width: 70
-        height: 47
+        x: 444
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1003,8 +1123,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5815ed2acc8d4c410800000000000000
-      internalID: 1496559349611254149
+      spriteID: 2717bcdc03d75a540800000000000000
+      internalID: 5018555008338850162
       vertices: []
       indices: 
       edges: []
@@ -1013,10 +1133,10 @@ TextureImporter:
       name: Batterfly Flying_37
       rect:
         serializedVersion: 2
-        x: 571
-        y: 32
-        width: 77
-        height: 47
+        x: 555
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,8 +1144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eeec3e5b8c3eb000800000000000000
-      internalID: 53546814854196961
+      spriteID: c420fcaf685a6e440800000000000000
+      internalID: 4964837638374621772
       vertices: []
       indices: 
       edges: []
@@ -1034,10 +1154,10 @@ TextureImporter:
       name: Batterfly Flying_38
       rect:
         serializedVersion: 2
-        x: 682
-        y: 32
-        width: 77
-        height: 58
+        x: 666
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,8 +1165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08e84ee4ef8f84760800000000000000
-      internalID: 7442472155358727808
+      spriteID: c6e50fa02b200f3f0800000000000000
+      internalID: -869191764371546516
       vertices: []
       indices: 
       edges: []
@@ -1055,10 +1175,10 @@ TextureImporter:
       name: Batterfly Flying_39
       rect:
         serializedVersion: 2
-        x: 794
-        y: 31
-        width: 76
-        height: 64
+        x: 777
+        y: 0
+        width: 111
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,8 +1186,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5f0030d268a65e80800000000000000
-      internalID: -8190173729973596322
+      spriteID: 06ffeb50ff19cadd0800000000000000
+      internalID: -2473441570834153632
       vertices: []
       indices: 
       edges: []

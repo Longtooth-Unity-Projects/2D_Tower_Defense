@@ -1,55 +1,52 @@
 fileFormatVersion: 2
-guid: 9f9df4a6623a4d54fa7464bf24e40a7f
+guid: f0b5303beb089f24cb13d066896293da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6543279331256932611
-    second: Weird Yellow Thing Walk_0
+      213: -8898071222588902783
+    second: Jabba Walking_0
   - first:
-      213: 2421249144102511327
-    second: Weird Yellow Thing Walk_1
+      213: 8298084095177405490
+    second: Jabba Walking_1
   - first:
-      213: 5302776192137820861
-    second: Weird Yellow Thing Walk_2
+      213: -7963612708707547389
+    second: Jabba Walking_2
   - first:
-      213: -3172153932161576816
-    second: Weird Yellow Thing Walk_3
+      213: -7610526614286523004
+    second: Jabba Walking_3
   - first:
-      213: 8859501995608984353
-    second: Weird Yellow Thing Walk_4
+      213: 4702092881318482462
+    second: Jabba Walking_4
   - first:
-      213: 3881870809507179621
-    second: Weird Yellow Thing Walk_5
+      213: 2356062786193476842
+    second: Jabba Walking_5
   - first:
-      213: 1494491838722616165
-    second: Weird Yellow Thing Walk_6
+      213: 2079731245301866431
+    second: Jabba Walking_6
   - first:
-      213: 3091572331750832840
-    second: Weird Yellow Thing Walk_7
+      213: 984936302769476046
+    second: Jabba Walking_7
   - first:
-      213: 2113557962437228330
-    second: Weird Yellow Thing Walk_8
+      213: -2578093862068254103
+    second: Jabba Walking_8
   - first:
-      213: -2048814041223763813
-    second: Weird Yellow Thing Walk_9
+      213: 1230655984377252044
+    second: Jabba Walking_9
   - first:
-      213: 1399260497681663427
-    second: Weird Yellow Thing Walk_10
+      213: -8146032167771056869
+    second: Jabba Walking_10
   - first:
-      213: 3239180239957050371
-    second: Weird Yellow Thing Walk_11
+      213: -1807585389387087921
+    second: Jabba Walking_11
   - first:
-      213: -3681544225101722871
-    second: Weird Yellow Thing Walk_12
+      213: 4611551433992501798
+    second: Jabba Walking_12
   - first:
-      213: -8200236097732297973
-    second: Weird Yellow Thing Walk_13
+      213: 8814104414533706894
+    second: Jabba Walking_13
   - first:
-      213: 2177537262254937881
-    second: Weird Yellow Thing Walk_14
-  - first:
-      213: 4386517269122361670
-    second: Weird Yellow Thing Walk_15
+      213: -2106685000583540032
+    second: Jabba Walking_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -161,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_0
+      name: Jabba Walking_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 152
-        width: 120
-        height: 152
+        y: 1407
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df66642bd1a9135a0800000000000000
-      internalID: -6543279331256932611
+      spriteID: 1827677fd53b38480800000000000000
+      internalID: -8898071222588902783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_1
+      name: Jabba Walking_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 152
-        width: 120
-        height: 152
+        x: 439
+        y: 1407
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd2e2faa4410a9120800000000000000
-      internalID: 2421249144102511327
+      spriteID: 2343e59f487b82370800000000000000
+      internalID: 8298084095177405490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_2
+      name: Jabba Walking_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 152
-        width: 120
-        height: 152
+        x: 0
+        y: 1206
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbaf5c7f9de379940800000000000000
-      internalID: 5302776192137820861
+      spriteID: 30743b83f609b7190800000000000000
+      internalID: -7963612708707547389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_3
+      name: Jabba Walking_3
       rect:
         serializedVersion: 2
-        x: 360
-        y: 152
-        width: 120
-        height: 152
+        x: 439
+        y: 1206
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09096a43ece3af3d0800000000000000
-      internalID: -3172153932161576816
+      spriteID: 485abc9dd5af16690800000000000000
+      internalID: -7610526614286523004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_4
+      name: Jabba Walking_4
       rect:
         serializedVersion: 2
-        x: 480
-        y: 152
-        width: 120
-        height: 152
+        x: 0
+        y: 1005
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12b4327102643fa70800000000000000
-      internalID: 8859501995608984353
+      spriteID: e1291e31090314140800000000000000
+      internalID: 4702092881318482462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_5
+      name: Jabba Walking_5
       rect:
         serializedVersion: 2
-        x: 600
-        y: 152
-        width: 120
-        height: 152
+        x: 439
+        y: 1005
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56c22a82fec2fd530800000000000000
-      internalID: 3881870809507179621
+      spriteID: aec449ffe9a62b020800000000000000
+      internalID: 2356062786193476842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_6
+      name: Jabba Walking_6
       rect:
         serializedVersion: 2
-        x: 720
-        y: 152
-        width: 120
-        height: 152
+        x: 0
+        y: 804
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b28ceb8608db410800000000000000
-      internalID: 1494491838722616165
+      spriteID: fbf9f787c80bcdc10800000000000000
+      internalID: 2079731245301866431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_7
+      name: Jabba Walking_7
       rect:
         serializedVersion: 2
-        x: 840
-        y: 152
-        width: 120
-        height: 152
+        x: 439
+        y: 804
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +319,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca3f67e7a877ea20800000000000000
-      internalID: 3091572331750832840
+      spriteID: ec116f459523bad00800000000000000
+      internalID: 984936302769476046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weird Yellow Thing Walk_8
+      name: Jabba Walking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 603
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a8ec1ba45c83cd0800000000000000
+      internalID: -2578093862068254103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_9
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 603
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8c385f81b241110800000000000000
+      internalID: 1230655984377252044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15d91727ea73fe80800000000000000
+      internalID: -8146032167771056869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 402
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf75645aaa2ae6e0800000000000000
+      internalID: -1807585389387087921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62af09e98958fff30800000000000000
+      internalID: 4611551433992501798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_13
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 201
+        width: 439
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84eb71144df15a70800000000000000
+      internalID: 8814104414533706894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jabba Walking_14
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 152
+        width: 439
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,155 +466,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a27f44bc4cdd45d10800000000000000
-      internalID: 2113557962437228330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_9
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b98660e0c762193e0800000000000000
-      internalID: -2048814041223763813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_10
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c54d80520c2b6310800000000000000
-      internalID: 1399260497681663427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_11
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 304ca1e2441e3fc20800000000000000
-      internalID: 3239180239957050371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_12
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90bcbed680788ecc0800000000000000
-      internalID: -3681544225101722871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_13
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0bb45047b8e23e80800000000000000
-      internalID: -8200236097732297973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_14
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 917d1e95a9a283e10800000000000000
-      internalID: 2177537262254937881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weird Yellow Thing Walk_15
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 0
-        width: 120
-        height: 152
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 649a72b273a00ec30800000000000000
-      internalID: 4386517269122361670
+      spriteID: 0c21396572d83c2e0800000000000000
+      internalID: -2106685000583540032
       vertices: []
       indices: 
       edges: []

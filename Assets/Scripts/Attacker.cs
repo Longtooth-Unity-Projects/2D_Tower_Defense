@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
+    [Header("Attacker Fields")]
     [Tooltip("Amount of damage caused each attack period indicated by the attack speed.")]
-    [Range(0, 5)] [SerializeField] int attackDamage = 1;
-    [Range(1, 5)] [SerializeField] float attackSpeed = 0.5f;
+    [Range(0, 50)] [SerializeField] int attackDamage = 1;
+    [Range(1, 5)] [SerializeField] float attackDelay = 0.5f;
     [Range(0f, 5f)] [SerializeField] float movementSpeed = 1f;
     private float currentMovementSpeed = 0f;
+
+    [Header("Health Fields")]
+    [SerializeField] private int health = 1;
+    [SerializeField] private GameObject deathVFX;
+    [SerializeField] private float vfxDestructionDelay = 1f;
 
 
     //cached references
@@ -67,7 +73,7 @@ public class Attacker : MonoBehaviour
             if (targetHealth)
                 targetHealth.TakeDamage(attackDamage);
 
-            yield return new WaitForSeconds(attackSpeed);
+            yield return new WaitForSeconds(attackDelay);
         }
 
         myAnimator.SetBool("bIsAttacking", false);
@@ -77,6 +83,29 @@ public class Attacker : MonoBehaviour
     public void StartMove() { currentMovementSpeed = movementSpeed; }
 
     public void StopMove() { currentMovementSpeed = 0f; }
+
+
+    //*****Health Functions
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+            ProcessDestruction();
+    }
+
+    private void ProcessDestruction()
+    {
+        if (deathVFX)
+        {
+            GameObject destructionVFXobj = Instantiate(deathVFX, transform.position, transform.rotation);
+            destructionVFXobj.transform.parent = LevelManager.VFXContainer.transform;
+            Destroy(destructionVFXobj, vfxDestructionDelay);
+        }
+        //AudioSource.PlayClipAtPoint(destructionClip, Camera.main.transform.position, destructionVolumeLevel);
+        Destroy(gameObject);
+    }
+
 
     //***** setters/getters
 
