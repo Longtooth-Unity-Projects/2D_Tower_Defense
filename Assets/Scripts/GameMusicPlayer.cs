@@ -20,12 +20,12 @@ public class GameMusicPlayer : MonoBehaviour
     }
 
 
-    void Start()
+    private void Start()
     {
-        DontDestroyOnLoad(this);
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefsController.GetMasterVolume();
     }
+
 
     public void SetVolume(float newVolume) { audioSource.volume = newVolume; }
 }

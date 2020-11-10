@@ -7,8 +7,6 @@ public class OptionsController : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Slider difficultySlider;
-    [SerializeField] private float defaultVolume = 0.5f;
-    [SerializeField] private float defaultDifficulty = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +25,10 @@ public class OptionsController : MonoBehaviour
             Debug.LogWarning("No music player found.");
     }
 
-    public void SetDefaults() 
-    { 
-        volumeSlider.value = defaultVolume;
-        difficultySlider.value = defaultDifficulty;
+    public void SetDefaults()
+    {
+        volumeSlider.value = PlayerPrefsController.GetDefaultVolume();
+        difficultySlider.value = PlayerPrefsController.GetDefaultDifficulty();
     }
 
     public void SaveAndLoadMainMenu()

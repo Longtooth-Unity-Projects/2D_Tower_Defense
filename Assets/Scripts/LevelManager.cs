@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -159,7 +157,6 @@ public class LevelManager : MonoBehaviour
     {
         levelCompleteCanvas.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(levelSuccessClip);
-        FindObjectOfType<SceneLoader>().LoadNextScene(sceneChangeDelay);
     }
 
     private void HandleLooseCondition()
